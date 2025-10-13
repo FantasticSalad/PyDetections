@@ -1,0 +1,10 @@
+2025-10-13T08:00:01Z	web01	svc_webapp	POST	/_layouts/15/ToolPane.aspx?DisplayMode=Edit	/_layouts/home.aspx	192.168.1.45	10.0.0.12	Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+2025-10-13T08:02:30Z	web02	svc_webapp	POST	/_layouts/15/ToolPane.aspx?DisplayMode=Edit	/_layouts/help.aspx	172.16.0.5	10.0.0.15	Mozilla/5.0 (Macintosh; Intel Mac OS X)
+2025-10-13T08:03:45Z	web01	svc_webapp	POST	/_layouts/15/ToolPane.aspx?DisplayMode=Edit	/_layouts/view.aspx	203.0.113.10	10.0.0.12	Mozilla/5.0 (Windows NT 6.1; WOW64)
+2025-10-13T08:04:59Z	web03	svc_webapp	POST	/_layouts/15/ToolPane.aspx?DisplayMode=Edit	/_layouts/edit.aspx	198.51.100.23	10.0.0.20	Mozilla/5.0 (iPhone; CPU iPhone OS 14_0)
+2025-10-13T08:06:00Z	web01	svc_webapp	POST	/_layouts/15/ToolPane.aspx?DisplayMode=Edit	/_layouts/preview.aspx	192.0.2.55	10.0.0.12	Mozilla/5.0 (Windows NT 10.0; Win64; x64)
+2025-10-13T08:06:30Z	web02	svc_webapp	POST	/_layouts/15/ToolPane.aspx?DisplayMode=Edit	/_layouts/dashboard.aspx	10.10.10.10	10.0.0.15	Mozilla/5.0 (Linux; Android 12)
+2025-10-13T08:07:00Z	web03	svc_webapp	POST	/_layouts/15/ToolPane.aspx?DisplayMode=Edit	/_layouts/profile.aspx	198.51.100.77	10.0.0.20	Mozilla/5.0 (Macintosh; Intel Mac OS X)
+2025-10-13T08:08:15Z	web01	svc_webapp	POST	/_layouts/15/ToolPane.aspx?DisplayMode=Edit	/_layouts/SignOut.aspx	203.0.113.99	10.0.0.12	curl/7.68.0
+2025-10-13T08:09:30Z	web01	svc_webapp	POST	/_layouts/15/ToolPane.aspx?DisplayMode=Edit	/_layouts/SignOut.aspx	192.168.1.99	10.0.0.12	python-requests/2.25.1
+2025-10-13T08:10:45Z	web02	svc_webapp	POST	/_layouts/15/ToolPane.aspx?DisplayMode=Edit	/_layouts/settings.aspx	192.168.1.100	10.0.0.15	Mozilla/5.0 (Windows NT 10.0; Win64; x64)
