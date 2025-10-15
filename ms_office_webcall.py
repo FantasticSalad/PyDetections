@@ -6,4 +6,8 @@
 # Code:
 
 with open("Logs\\sysmon_dns.txt","r") as log_text:
-    print(log_text.read())
+    for line in log_text:
+        
+        # print(type(line))
+        print(log_text.read())
+    
