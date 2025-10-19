@@ -2,7 +2,7 @@
 # Description: Checks for attempts to clear log entries from event logs using wevtutil. Clearing event logs can be a sign of ransomware activity, as attackers often attempt to cover its tracks by deleting logs.
 # MITRE Tactic: DefenseEvasion
 # MITRE Technique: T1070
-# Log Source: 
+# Log Source: Windows Process Logs
 # Code:
 
 import re
