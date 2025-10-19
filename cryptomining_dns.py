@@ -6,7 +6,6 @@
 # Code:
 
 import json
-import re
 
 with open("Logs\\sysmon_dns.txt", "r") as log_file:
     for line in log_file:   
@@ -42,23 +41,7 @@ with open("Logs\\sysmon_dns.txt", "r") as log_file:
                     "rawpool.com",
                     "dwmxmr.com",
                     "hashvault.pro"
-            )
-            
-            print(json_line["QueryName"])
+            ):
+                print(f"{json_line["UtcTime"]}: Process at path {json_line["Image"]} initiated a DNS query to {json_line["QueryName"]}, a known crypto mining domain. User: {json_line["UserID"]}.")
         except json.JSONDecodeError as error:
             print(f"Failed to parse line: {error}")
-
-
-         
-         
-         
-        # line_str = line.strip("{").strip("}")
-        # print(line_str)
-    #     i_list = line.strip(",")
-    #     print(i_list)
-#     dns_data = log_file.read()
-    
-# # print(dns_data)
-
-# asdf = json.dumps(dns_data)
-    
