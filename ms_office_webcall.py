@@ -5,9 +5,13 @@
 # Log Source: 
 # Code:
 
-with open("Logs\\sysmon_dns.txt","r") as log_text:
-    for line in log_text:
-        
-        # print(type(line))
-        print(log_text.read())
-    
+import json
+
+with open("Logs\\sysmon_dns.txt","r") as log_file:
+    for line in log_file:   
+        try:
+            json_line = json.loads(line)
+            QueryName = json_line["QueryName"]
+        except json.JSONDecodeError as error:
+                    print(f"Failed to parse line: {error}")
+        print(log_file.read())
