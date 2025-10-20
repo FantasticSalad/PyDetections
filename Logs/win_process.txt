@@ -19,3 +19,13 @@
 2025-10-12T08:08:15Z,web01,svc_webapp,powershell.exe,"powershell -nop -w hidden -c wevtutil cl Security",w3wp.exe,"w3wp.exe -ap \"DefaultAppPool\"",C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe,Yes,1
 2025-10-12T08:08:45Z,web01,svc_webapp,cmd.exe,"cmd.exe /c wevtutil cl System",w3wp.exe,"w3wp.exe -ap \"DefaultAppPool\"",C:\Windows\System32\cmd.exe,Yes,1
 2025-10-12T08:09:30Z,web01,svc_webapp,cmd.exe,"cmd.exe /c wevtutil el",explorer.exe,"explorer.exe",C:\Windows\System32\cmd.exe,No,1
+2025-10-12T08:10:01Z,web01,svc_webapp,net.exe,"net user tempadmin P@ssw0rd! /add",cmd.exe,"cmd.exe /c net user",C:\Windows\System32\net.exe,Yes,1
+2025-10-12T08:10:15Z,web01,svc_webapp,net.exe,"net localgroup administrators tempadmin /add",cmd.exe,"cmd.exe /c net localgroup",C:\Windows\System32\net.exe,Yes,1
+2025-10-12T08:10:30Z,web01,svc_webapp,powershell.exe,"powershell New-LocalUser -Name tempadmin -Password (ConvertTo-SecureString 'P@ssw0rd!' -AsPlainText -Force)",explorer.exe,"explorer.exe",C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe,Yes,1
+2025-10-12T08:10:45Z,web01,svc_webapp,powershell.exe,"powershell Add-LocalGroupMember -Group 'Administrators' -Member 'tempadmin'",explorer.exe,"explorer.exe",C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe,Yes,1
+2025-10-12T08:11:00Z,web01,svc_webapp,cmd.exe,"cmd.exe /c net user svc_temp /add",services.exe,"services.exe",C:\Windows\System32\cmd.exe,Yes,1
+2025-10-12T08:11:15Z,web01,svc_webapp,cmd.exe,"cmd.exe /c net localgroup administrators svc_temp /add",services.exe,"services.exe",C:\Windows\System32\cmd.exe,Yes,1
+2025-10-12T08:11:30Z,web01,svc_webapp,powershell.exe,"powershell -Command \"net user admin2 P@ss123 /add; net localgroup administrators admin2 /add\"",w3wp.exe,"w3wp.exe -ap \"DefaultAppPool\"",C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe,Yes,1
+2025-10-12T08:11:45Z,web01,svc_webapp,wmic.exe,"wmic useraccount where name='admin2' set PasswordExpires=False",cmd.exe,"cmd.exe /c wmic",C:\Windows\System32\wbem\wmic.exe,Yes,1
+2025-10-12T08:12:00Z,web01,svc_webapp,net1.exe,"net1 user backupadmin Secure123! /add",cmd.exe,"cmd.exe /c net1",C:\Windows\System32\net1.exe,Yes,1
+2025-10-12T08:12:15Z,web01,svc_webapp,net1.exe,"net1 localgroup administrators backupadmin /add",cmd.exe,"cmd.exe /c net1",C:\Windows\System32\net1.exe,Yes,1

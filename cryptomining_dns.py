@@ -44,4 +44,5 @@ with open("Logs\\sysmon_dns.txt", "r") as log_file:
             ):
                 print(f"{json_line["UtcTime"]}: Process at path {json_line["Image"]} initiated a DNS query to {json_line["QueryName"]}, a known crypto mining domain. User: {json_line["UserID"]}.")
         except json.JSONDecodeError as error:
-            print(f"Failed to parse line: {error}")
+            # drop results that are malformed
+            continue
