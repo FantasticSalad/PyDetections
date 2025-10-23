@@ -18,7 +18,13 @@ with open("Logs\\win_process.txt", "r") as log_file:
         command_line1= command_line1.strip("\"")
         net_user_match = re.search(r"net1?\suser\s(\S+)", command_line1)
         if net_user_match:
-            accounts_created.append(net_user_match.group(1))
+            accounts_created.append({
+            "user": net_user_match.group(1),
+            "timestamp": timestamp1,
+            "command_line": command_line1,
+            "host": host1,
+            "child_process": child_process1
+        })
     log_file.seek(0)
     for line in log_file:
         i_list2 = line.strip().split(",")
@@ -26,6 +32,15 @@ with open("Logs\\win_process.txt", "r") as log_file:
             continue
         timestamp2, host2, user2, child_process2, command_line2, parent_proces2, path2 = i_list2[:7]
         command_line2 = command_line2.strip("\"")
-        add_admin_match = re.search(r"net1?\slocalgroup\sadministrators\s(\S+)", command_line2)
-        if add_admin_match and add_admin_match.group(1) in accounts_created:
-                print(f"Detected creation of local admin account \"{add_admin_match.group(1)}\" using {child_process2} on host {host2}. \n{timestamp1}: Local admin user creation command line: {command_line1} \n{timestamp2}: Account added to administrators group command line: {command_line2}\n")
+        add_admin_match = re.search(r"net1?\slocalgroup\sadministrators\s(\S+)", command_line2)        
+        if add_admin_match:
+            for entry in accounts_created:
+                if add_admin_match.group(1) == entry["user"]:
+                    print(f"""Detected creation of local admin account "{entry['user']}" using {child_process2} on host {host2}.
+{entry['timestamp']}: Local admin user creation command line: {entry['command_line']}
+{timestamp2}: Account added to administrators group command line: {command_line2}
+""")
+        
+
+        # if add_admin_match and add_admin_match.group(1) in accounts_created:
+        #         print(f"Detected creation of local admin account \"{add_admin_match.group(1)}\" using {child_process2} on host {host2}. \n{timestamp1}: Local admin user creation command line: {command_line1} \n{timestamp2}: Account added to administrators group command line: {command_line2}\n")
