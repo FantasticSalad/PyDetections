@@ -5,10 +5,10 @@
 # Log Source: Windows Process Logs
 # Code:
         
-with open("Logs\\win_process.txt", "r") as logs:
+with open("logs/win_process.txt", "r") as logs:
     for line in logs:
         data = line.strip().split(",")
-        if len(data) > 5:  # check parent_process exists
+        if len(data) > 5:
             timestamp, host, user, child_process, command_line, parent_process, path = data[:7]
             parent = parent_process.lower()
             child = child_process.lower()

@@ -9,7 +9,7 @@ import re
 
 accounts_created = []
 
-with open("Logs\\win_process.txt", "r") as log_file:
+with open("logs/win_process.txt", "r") as log_file:
     for line in log_file:
         i_list1 = line.strip().split(",")
         if len(i_list1) < 7:
@@ -40,7 +40,3 @@ with open("Logs\\win_process.txt", "r") as log_file:
 {entry['timestamp']}: Local admin user creation command line: {entry['command_line']}
 {timestamp2}: Account added to administrators group command line: {command_line2}
 """)
-        
-
-        # if add_admin_match and add_admin_match.group(1) in accounts_created:
-        #         print(f"Detected creation of local admin account \"{add_admin_match.group(1)}\" using {child_process2} on host {host2}. \n{timestamp1}: Local admin user creation command line: {command_line1} \n{timestamp2}: Account added to administrators group command line: {command_line2}\n")
