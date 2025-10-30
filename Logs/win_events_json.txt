@@ -1,0 +1,224 @@
+[
+  {
+    "@timestamp": "2025-10-30T10:45:01.321Z",
+    "log_name": "Security",
+    "event_id": 4624,
+    "event_type": "logon",
+    "event_code": 4624,
+    "computer_name": "DC01.corp.local",
+    "provider_name": "Microsoft-Windows-Security-Auditing",
+    "user": {
+      "domain": "CORP",
+      "name": "svc_backup",
+      "sid": "S-1-5-21-1000000000-2000000000-3000000000-4001"
+    },
+    "logon": {
+      "type": 3,
+      "ip_address": "10.1.1.25"
+    },
+    "winlog": {
+      "channel": "Security",
+      "record_id": 103900,
+      "opcode": "Info",
+      "keywords": ["Audit Success"]
+    }
+  },
+  {
+    "@timestamp": "2025-10-30T10:46:12.456Z",
+    "log_name": "Security",
+    "event_id": 4663,
+    "event_type": "file_access",
+    "event_code": 4663,
+    "computer_name": "DC01.corp.local",
+    "provider_name": "Microsoft-Windows-Security-Auditing",
+    "user": {
+      "domain": "CORP",
+      "name": "helpdesk01",
+      "sid": "S-1-5-21-1000000000-2000000000-3000000000-4002"
+    },
+    "file": {
+      "object_name": "C:\\Windows\\System32\\drivers\\etc\\hosts",
+      "access_mask": "0x2",
+      "process_name": "notepad.exe"
+    },
+    "winlog": {
+      "channel": "Security",
+      "record_id": 103901,
+      "opcode": "Info",
+      "keywords": ["Audit Success"]
+    }
+  },
+  {
+    "@timestamp": "2025-10-30T10:47:33.789Z",
+    "log_name": "Security",
+    "event_id": 4656,
+    "event_type": "file_handle_request",
+    "event_code": 4656,
+    "computer_name": "DC01.corp.local",
+    "provider_name": "Microsoft-Windows-Security-Auditing",
+    "user": {
+      "domain": "CORP",
+      "name": "admin01",
+      "sid": "S-1-5-21-1000000000-2000000000-3000000000-4003"
+    },
+    "file": {
+      "object_name": "C:\\Windows\\System32\\config\\SAM",
+      "access_mask": "0x1",
+      "process_name": "reg.exe"
+    },
+    "winlog": {
+      "channel": "Security",
+      "record_id": 103902,
+      "opcode": "Info",
+      "keywords": ["Audit Success"]
+    }
+  },
+  {
+    "@timestamp": "2025-10-30T10:48:44.012Z",
+    "log_name": "Security",
+    "event_id": 4624,
+    "event_type": "logon",
+    "event_code": 4624,
+    "computer_name": "WS02.corp.local",
+    "provider_name": "Microsoft-Windows-Security-Auditing",
+    "user": {
+      "domain": "CORP",
+      "name": "user02",
+      "sid": "S-1-5-21-1000000000-2000000000-3000000000-4004"
+    },
+    "logon": {
+      "type": 2,
+      "ip_address": "10.0.0.45"
+    },
+    "winlog": {
+      "channel": "Security",
+      "record_id": 103903,
+      "opcode": "Info",
+      "keywords": ["Audit Success"]
+    }
+  },
+  {
+    "@timestamp": "2025-10-30T10:49:55.678Z",
+    "log_name": "Security",
+    "event_id": 4663,
+    "event_type": "file_access",
+    "event_code": 4663,
+    "computer_name": "DC01.corp.local",
+    "provider_name": "Microsoft-Windows-Security-Auditing",
+    "user": {
+      "domain": "CORP",
+      "name": "backupsvc",
+      "sid": "S-1-5-21-1000000000-2000000000-3000000000-4005"
+    },
+    "file": {
+      "object_name": "C:\\Logs\\weekly_backup.zip",
+      "access_mask": "0x1",
+      "process_name": "robocopy.exe"
+    },
+    "winlog": {
+      "channel": "Security",
+      "record_id": 103904,
+      "opcode": "Info",
+      "keywords": ["Audit Success"]
+    }
+  },
+  {
+    "@timestamp": "2025-10-30T10:50:10.123Z",
+    "log_name": "Security",
+    "event_id": 4656,
+    "event_type": "file_handle_request",
+    "event_code": 4656,
+    "computer_name": "DC01.corp.local",
+    "provider_name": "Microsoft-Windows-Security-Auditing",
+    "user": {
+      "domain": "CORP",
+      "name": "attacker_admin",
+      "sid": "S-1-5-21-1000000000-2000000000-3000000000-9999"
+    },
+    "file": {
+      "object_name": "C:\\Windows\\NTDS\\ntds.dit",
+      "access_mask": "0x120089",
+      "process_name": "ntdsutil.exe"
+    },
+    "winlog": {
+      "channel": "Security",
+      "record_id": 103905,
+      "opcode": "Info",
+      "keywords": ["Audit Success"]
+    }
+  },
+  {
+    "@timestamp": "2025-10-30T10:50:11.456Z",
+    "log_name": "Security",
+    "event_id": 4663,
+    "event_type": "file_access",
+    "event_code": 4663,
+    "computer_name": "DC01.corp.local",
+    "provider_name": "Microsoft-Windows-Security-Auditing",
+    "user": {
+      "domain": "CORP",
+      "name": "attacker_admin",
+      "sid": "S-1-5-21-1000000000-2000000000-3000000000-9999"
+    },
+    "file": {
+      "object_name": "C:\\Windows\\NTDS\\ntds.dit",
+      "access_mask": "0x120089",
+      "process_name": "ntdsutil.exe"
+    },
+    "winlog": {
+      "channel": "Security",
+      "record_id": 103906,
+      "opcode": "Info",
+      "keywords": ["Audit Success"]
+    }
+  },
+  {
+    "@timestamp": "2025-10-30T10:51:22.789Z",
+    "log_name": "Security",
+    "event_id": 4624,
+    "event_type": "logon",
+    "event_code": 4624,
+    "computer_name": "DC01.corp.local",
+    "provider_name": "Microsoft-Windows-Security-Auditing",
+    "user": {
+      "domain": "CORP",
+      "name": "svc_sched",
+      "sid": "S-1-5-21-1000000000-2000000000-3000000000-4006"
+    },
+    "logon": {
+      "type": 5,
+      "ip_address": "127.0.0.1"
+    },
+    "winlog": {
+      "channel": "Security",
+      "record_id": 103907,
+      "opcode": "Info",
+      "keywords": ["Audit Success"]
+    }
+  },
+  {
+    "@timestamp": "2025-10-30T10:52:03.123Z",
+    "log_name": "Security",
+    "event_id": 4656,
+    "event_type": "file_handle_request",
+    "event_code": 4656,
+    "computer_name": "WS02.corp.local",
+    "provider_name": "Microsoft-Windows-Security-Auditing",
+    "user": {
+      "domain": "CORP",
+      "name": "maintsvc",
+      "sid": "S-1-5-21-1000000000-2000000000-3000000000-4007"
+    },
+    "file": {
+      "object_name": "C:\\Temp\\logrotate.bat",
+      "access_mask": "0x80",
+      "process_name": "powershell.exe"
+    },
+    "winlog": {
+      "channel": "Security",
+      "record_id": 103908,
+      "opcode": "Info",
+      "keywords": ["Audit Success"]
+    }
+  }
+]
