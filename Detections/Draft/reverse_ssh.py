@@ -5,6 +5,8 @@
 # Log Source: 
 # Code:
 
+import re
+
 with open("logs/syslog.txt", "r") as log_file:
     for line in log_file:
         i_list = line.split()
@@ -17,7 +19,17 @@ with open("logs/syslog.txt", "r") as log_file:
         message = " ".join(i_list[5:])
         command = message[4:]
         
-        print(timestamp, hostname, process, message, "command", command)
+        ssh_check = re.search(r"(\bssh\b|\bautossh\b)", command)
+        
+        r_check = re.search(r"\b-R\b", command, re.IGNORECASE)
+        
+        print(f"{ssh_check}, {r_check}")
+        
+        # print(f"{timestamp}: {message}. Host: {hostname}, Process: {process}")
+        
+        # print(f"MESSAGE: {message}")
+        
+        print(f"COMMAND: {command}")
         
         # operation = " ".join([i_list[2],i_list[3],i_list[4],i_list[6],i_list[7]])
         # ip_address = i_list[5]
