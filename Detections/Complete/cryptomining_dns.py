@@ -1,7 +1,7 @@
 # Title: DNS Query to Cryptomining Pool
 # Description: This detection alerts upon DNS query traffic to known cryptomining pools.
 # MITRE Tactic: Impact
-# MITRE Technique: T1496
+# MITRE Technique: T1496 – Resource Hijacking
 # Log Source: Sysmon DNS Logs
 # Code:
 
