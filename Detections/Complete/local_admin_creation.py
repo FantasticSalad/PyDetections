@@ -1,7 +1,7 @@
 # Title: Local Admin Creation
 # Description: Detects creation of local user accounts followed by their addition to the Administrators group, using either net.exe/net1.exe or PowerShell cmdlets.
 # MITRE Tactic: Privilege Escalation, Persistence
-# MITRE Technique: T1136.001 (Create Account: Local Account), T1078.004 (Valid Accounts: Local Accounts)
+# MITRE Technique: T1136.001 - Create Account: Local Account), T1078.004 - Valid Accounts: Local Accounts
 # Log Source: Windows Process Execution Logs
 # Code:
 
