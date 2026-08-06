@@ -10,7 +10,6 @@ import os
 
 with open("Logs/mfa_registration.txt", "r") as data:
     for line in data:
-            for word in line:
-                line_list = line.strip().split()
+            line_list = line.strip().split()
             print(line_list)
     
