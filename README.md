@@ -35,10 +35,10 @@ Each detection reads from `Logs/` via relative path, so run from the repo root.
 
 ```
 PyDetections/
-&#9500;&#9472;&#9472; Detections/
-&#9474;   &#9500;&#9472;&#9472; Complete/        # validated detections
-&#9474;   &#9492;&#9472;&#9472; Draft/           # in progress
-&#9492;&#9472;&#9472; Logs/                # sample logs the detections parse
+├── Detections/
+│   ├── Complete/        # validated detections
+│   └── Draft/           # in progress
+└── Logs/                # sample logs the detections parse
 ```
 
 ## On AI use
