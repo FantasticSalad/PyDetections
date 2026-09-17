@@ -39,7 +39,7 @@ Then compare the output of the detection you touched against its section in
 
 ## Known issues
 
-- **Log paths only work on Windows.** Several scripts open `Logs\\file.txt`
+- **Log paths only work on Windows.** Several scripts open `Logs\file.txt`
   (backslash) or `logs/file.txt` (the folder is `Logs`). Windows accepts both,
   but on Linux and macOS those scripts fail with `FileNotFoundError`, although
   the README tells readers to clone and run. The fix is to use `Logs/<file>`
