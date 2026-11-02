@@ -2,6 +2,9 @@
 
 Threat-led detections written in Python, each tested against sample logs included in the repo.
 
+Authoring and review guidance is in [DETECTION_STYLE.md](DETECTION_STYLE.md), which
+connects the shared detection standard to this repository's Python format.
+
 ## What's here
 
 Each detection in `Detections/Complete/` is a self-contained script that reads a log file, applies parsing and matching logic, and prints an alert when it triggers. Detections cover techniques across the MITRE ATT&CK matrix: credential access, defence evasion, command and control, execution, persistence, initial access. Some respond to specific incidents (the SharePoint ToolPane.aspx exploit, the F5 breach disclosure); others target durable adversary behaviour (NTDS.dit access, log clearing via wevtutil, reverse SSH tunnels, certutil downloads).
