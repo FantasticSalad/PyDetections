@@ -132,7 +132,13 @@ Fires on tab-separated lines with 9 fields where `http_method=POST`, `request_ur
 
 ### `cryptomining_dns.py`
 
-Fires on any line whose JSON `QueryName` matches a known crypto pool domain. Re-derive count from current log.
+16 lines total, all Sysmon event 22 (DNS query) as JSON, dated `2025-11-04`. Synthetic: the resolved addresses are from documentation ranges.
+
+Fires on any line whose JSON `QueryName` matches a known crypto pool domain. Expected hits:
+- `2025-11-04 09:19:47.126` &mdash; `svchost.exe` queries `pool.minexmr.com`
+- `2025-11-04 09:19:48.205` &mdash; `svchost.exe` queries `hashvault.pro`
+
+Total: 2 hits. The other 14 lines are Office and Windows update lookups and are benign. `www.mediafire.com` queried by `WINWORD.EXE` (09:16:32) is not in the pool list and does not fire; it is the case the draft `ms_office_webcall.py` is meant to cover.
 
 ---
 
